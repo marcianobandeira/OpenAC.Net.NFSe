@@ -68,6 +68,35 @@ public static class ParametrosProvider
                         VersoesAfetadas = [VersaoNFSe.ve204]
                     }
                 ]
+            },
+            {
+                NFSeProvider.ISSMap,
+                [
+                    new ParametroProvider
+                    {
+                        Nome = "CodigoCidade",
+                        Descricao = "O provedor ISSMap usa apenas uma URL para todas as cidades, diferindo apenas o código fixo para cada uma delas",
+                        Tipo = TipoParametro.Int,
+                        Obrigatoria = true,
+                        VersoesAfetadas = [VersaoNFSe.ve100, VersaoNFSe.ve101, VersaoNFSe.ve103, VersaoNFSe.ve200, VersaoNFSe.ve201, VersaoNFSe.ve202, VersaoNFSe.ve203, VersaoNFSe.ve204]
+                    },
+                    new ParametroProvider
+                    {
+                        Nome = "ChaveCriptografia",
+                        Descricao = "Cada campo do xml (exceto key) é criptografado com base na chave fornecida pela prefeitura ao prestador",
+                        Tipo = TipoParametro.Text,
+                        Obrigatoria = true,
+                        VersoesAfetadas = [VersaoNFSe.ve100, VersaoNFSe.ve101, VersaoNFSe.ve103, VersaoNFSe.ve200, VersaoNFSe.ve201, VersaoNFSe.ve202, VersaoNFSe.ve203, VersaoNFSe.ve204]
+                    },
+                    new ParametroProvider
+                    {
+                        Nome = "Key",
+                        Descricao = "Refere-se ao código que identifica a Chave de criptografia entre o prestador e a prefeitura, é fornecido juntamente com a chave de criptografia",
+                        Tipo = TipoParametro.Int,
+                        Obrigatoria = true,
+                        VersoesAfetadas = [VersaoNFSe.ve100, VersaoNFSe.ve101, VersaoNFSe.ve103, VersaoNFSe.ve200, VersaoNFSe.ve201, VersaoNFSe.ve202, VersaoNFSe.ve203, VersaoNFSe.ve204]
+                    },
+                ]
             }
         };
     }

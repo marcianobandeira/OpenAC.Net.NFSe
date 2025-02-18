@@ -48,6 +48,7 @@ public sealed class DadosPrestador : GenericClone<DadosPrestador>, INotifyProper
     {
         CpfCnpj = string.Empty;
         InscricaoMunicipal = string.Empty;
+        InscricaoEstadual = string.Empty;
         NumeroEmissorRps = string.Empty;
         RazaoSocial = string.Empty;
         NomeFantasia = string.Empty;
@@ -62,6 +63,7 @@ public sealed class DadosPrestador : GenericClone<DadosPrestador>, INotifyProper
     public string CpfCnpj { get; set; }
 
     public string InscricaoMunicipal { get; set; }
+    public string InscricaoEstadual { get; set; }
 
     public string NumeroEmissorRps { get; set; }
 
